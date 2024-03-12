@@ -4,7 +4,7 @@ const giftbox = document.getElementById('merrywrap');
 const canvasC = document.getElementById('c');
 
 const config = {
-  birthdate: 'Mar 15, 2024',
+  birthdate: 'Mar 15, 2023',
   name: '❤	Khin Sandi Htet ❤	'
 };
 
