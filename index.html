@@ -3,19 +3,35 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Happy Birthday!</title>
 
   <link rel="stylesheet" href="styles/flexbox-center-container.css" media="all">
   <link rel="stylesheet" href="styles/system-fonts.css" media="all">
   <link rel="stylesheet" href="styles/style.css" media="all">
+  <style>
+    #head {
+      font-family: "Your Girlfriend's Favorite Font", sans-serif; /* Change to your girlfriend's favorite font */
+      font-size: 32px; /* Adjust font size as needed */
+      color: pink; /* Change color to something your girlfriend likes */
+      text-align: center; /* Center the text */
+    }
+
+    /* Responsive styles */
+    @media screen and (max-width: 600px) {
+      #head {
+        font-size: 24px; /* Adjust font size for smaller screens */
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <canvas id=c></canvas>
+  <canvas id="c"></canvas>
   <canvas id="confetti"></canvas>
   <div class="container" id="count">
-    <h1 id="head">Countdown to Khin Sandi Htet birthday:</h1>
+    <h1 id="head">Countdown to ❤	Khin Sandi Htet &#128151; birthday:</h1>
+    <!-- Added &#x1F496; for the love emoji -->
     <ul>
       <li><span id="day"></span>days</li>
       <li><span id="hour"></span>hours</li>
@@ -31,6 +47,7 @@
       </div>
       <div class="box"></div>
     </div>
+  </div>
 </body>
 <script src="scripts/confetti.min.js" charset="utf-8"></script>
 <script src="scripts/index.js" charset="utf-8"></script>
