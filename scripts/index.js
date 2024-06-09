@@ -2,10 +2,11 @@ const count = document.getElementById('count');
 const head = document.getElementById('head');
 const giftbox = document.getElementById('merrywrap');
 const canvasC = document.getElementById('c');
+const audio = document.getElementById('birthday-audio'); // Reference to the audio element
 
 const config = {
-  birthdate: 'Mar 15, 2023',
-  name: '❤	Khin Sandi Htet ❤	'
+  birthdate: 'Jun 26, 2023',
+  name: '❤IngyinHmwe❤'
 };
 
 function hideEverything() {
@@ -13,6 +14,7 @@ function hideEverything() {
   count.style.display = 'none';
   giftbox.style.display = 'none';
   canvasC.style.display = 'none';
+  
 }
 
 hideEverything();
@@ -457,7 +459,7 @@ x = setInterval(function() {
     giftbox.style.display = 'initial';
     clearInterval(x);
     let merrywrap = document.getElementById('merrywrap');
-    let box = merrywrap.getElementsByClassName('giftbox')[0];
+    let box = merrywrap.getElementsByClassName('giftbox','audio')[0];
     let step = 1;
     let stepMinutes = [2000, 2000, 1000, 1000];
 
@@ -483,6 +485,7 @@ x = setInterval(function() {
       }
       setTimeout(openBox, stepMinutes[step - 1]);
       step++;
+      audio.play(); // Play the audio when the box is opened
       //   setTimeout(anim, 1900);
     }
 
@@ -493,6 +496,13 @@ x = setInterval(function() {
 
     init();
   }
+
+  function openBox() {
+    giftbox.classList.toggle('open');
+   
+  }
+
+  giftbox.addEventListener('click', openBox);
 
   // if (distance < 0) {
   //     clearInterval(x);
